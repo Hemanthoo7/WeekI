@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+            id="Admin_Acl::manager"
+            title="Blogs Manager"
+            module="Admin_Acl"
+            sortOrder="10"
+            resource="Admin_Acl::manager" />
+
+        <add
+            id="Admin_Acl::index"
+            title="Blogs"
+            module="Admin_Acl"
+            sortOrder="12"
+            parent="Admin_Acl::manager"
+            action="route/controller/index"
+            resource="Admin_Acl::index" />
+
+        <add
+            id="Admin_Acl::configuration"
+            title="Blogs Configuration"
+            module="Admin_Acl"
+            parent="Admin_Acl::manager"
+            sortOrder="16"
+            action="adminhtml/system_config/edit/section/route/"
+            resource="Admin_Acl::configuration"/>
+
+    </menu>
+</config>
